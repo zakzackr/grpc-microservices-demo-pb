@@ -1,0 +1,23 @@
+version: v2
+# managed modeを使用することで、各protoファイルでoption go_packageを書くが必要なくなる
+managed:
+    enabled: true
+    override:
+        - file_option: go_package_prefix
+          value: github.com/zakzackr/grpc-microservices-demo-pb/gen
+# Goコード生成のためのプラグイン（リモートプラグインを使用）
+plugins:
+    # protoc-gen-goプラグイン
+    # Goのプリミティブ型を生成。Protobuf の message 型と enum 型の Go コードを生成する
+    # 参照：https://buf.build/protocolbuffers/go?version=v1.36.11
+    - remote: buf.build/protocolbuffers/go:v1.36.11
+      out: gen
+      opt:
+          - paths=source_relative
+    # protoc-gen-go-grpcプラグイン
+    # gRPCフレームワーク用の Go のクライアントコード（Client）とサーバーコード（Server Stub）を生成
+    # 参照：https://buf.build/grpc/go?version=v1.6.0
+    - remote: buf.build/grpc/go:v1.6.0
+      out: gen
+      opt:
+          - paths=source_relative

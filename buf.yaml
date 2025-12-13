@@ -1,0 +1,13 @@
+# For details on buf.yaml configuration, visit https://buf.build/docs/configuration/v2/buf-yaml
+version: v2
+# .protoファイルのパスを指定
+modules:
+    path: proto
+#lintの設定
+lint:
+    use:
+        - STANDARD
+#破壊的変更の検知
+breaking:
+    use:
+        - FILE
