@@ -2,11 +2,18 @@
 version: v2
 # .protoファイルのパスを指定
 modules:
-    path: proto
+    - path: proto
 #lintの設定
 lint:
     use:
         - STANDARD
+    except: #lintの除外ルール設定
+        - PACKAGE_DIRECTORY_MATCH
+        - PACKAGE_VERSION_SUFFIX
+        - SERVICE_SUFFIX
+        - RPC_REQUEST_STANDARD_NAME
+        - RPC_RESPONSE_STANDARD_NAME
+        - RPC_REQUEST_RESPONSE_UNIQUE
 #破壊的変更の検知
 breaking:
     use:

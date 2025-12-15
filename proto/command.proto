@@ -8,9 +8,9 @@ syntax = "proto3";
 // option go_package = "/pb";
 
 // error.protoのインポート
-import "proto/error.proto";
+import "error.proto";
 // models.protoのインポート
-import "proto/models.proto";
+import "models.proto";
 
 // google/protobufモジュールのデータ型（Well-Known Types）をインポート
 import "google/protobuf/timestamp.proto";
