@@ -1,9 +1,8 @@
 # grpc-microservices-demo-pb
 
-「実践！Go 言語と gRPC で学ぶマイクロサービス開発」の実践コード
+「実践！Go 言語と gRPC で学ぶマイクロサービス開発」の Protocol Buffers
 
-Protocol Buffers:  
-本レポジトリ
+## その他の実践コード
 
 Command Service:  
 https://github.com/zakzackr/grpc-microservices-demo-command-service
