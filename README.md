@@ -10,5 +10,8 @@ https://github.com/zakzackr/grpc-microservices-demo-command-service
 Query Service:  
 https://github.com/zakzackr/grpc-microservices-demo-query-service
 
+CQRS Client:  
+https://github.com/zakzackr/grpc-microservices-demo-cqrs-client
+
 Sample Database:  
 https://github.com/zakzackr/grpc-microservices-demo-db
